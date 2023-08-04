@@ -19,9 +19,12 @@ function readInput() {
       sum += list;
     });
     let avg = list.length > 0 ? sum / list.length : 0;
+    let formattedAvg = avg.toLocaleString(undefined, {minimumFractionDigits:2, 
+    maximumFractionDigits:2});
     let min = list.length > 0 ? Math.min(...list) : 0;
     let max = list.length > 0 ? Math.max(...list) : 0;
-    alert("For the list " + list + " the average is " + avg + ", the mininum is " + min + ", and the maximum is " + max)
+    alert("For the list " + list + " the average is " 
+    + formattedAvg + ", the mininum is " + min + ", and the maximum is " + max)
   }
 
 list = readInput();

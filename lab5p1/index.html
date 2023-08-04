@@ -1,72 +1,24 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="styles/P1P2-style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selection and Condition</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;400;500;600&family=Montserrat:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <title>643040542-0 lab5p1</title>
 </head>
 
 <body>
-    <style>
-        @media (min-width: 375px) {
-            body {
-                font-size: 15px;
-            }
-        }
-        @media (min-width: 768px) {
-            body {
-                font-size: 24px;
-            }
-        }
-    </style>
-    <script type="text/javascript">
-        do {
-            var input = parseFloat(prompt("Please Enter a positive integer: "));
-            if (Number.isInteger(input) && input >= 0) {
-                if (input%1 == 0) {
-                    break
-                }
-            }
-        } while (true);
-        // เก็บ input
-
-        function isPrime(number) {
-            if (number < 2) {
-                return false;
-            }
-
-            for (let i = 2; i <= Math.sqrt(number); i++) {
-                if (number % i === 0) {
-                    return false;
-                }
-            }
-
-            return true;
-        }
-        // เช็คตัวเลขว่าเป็น Prime number หรือไม่
-
-        function findPrimesLessThanInput(input) {
-            const primes = [];
-
-            for (let i = 2; i <= input; i++) {
-                if (isPrime(i)) {
-                    primes.push(i);
-                }
-            }
-
-            return primes;
-        }
-        // หา prime number ทั้งหมดที่น้อยกว่าหรือเท่ากับ input แล้วมายัดใส่ array เปล่า
-
-
-        const primesLessThanInput = findPrimesLessThanInput(input);
-
-        alert("For n = " + input + " prime numbers are " + primesLessThanInput)
-    </script>
+    <script src="scripts/P1-script.js"></script>
     <h1 style="text-align: center;">Prime Numbers Finder!</h1>
     <h2>Write the web app to prompt accepting for a positive integer number</h2>
     <ul>
-        <li>If the entered text is not a positive integer number, then web app will keep asking for a number until valid postive integer is enterd</li>
+        <li>If the entered text is not a positive integer number, then web app will keep asking for a number until valid
+            postive integer is enterd</li>
         <li>If the entered text is a positive integer, then the web app will add into a list of prime numbers</li>
     </ul>
 
@@ -77,4 +29,5 @@
         <li>You may want to use array with push function</li>
     </ol>
 </body>
+
 </html>
